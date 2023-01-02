@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Convertor</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .container{
+            text-align: center;
+            background-color: aquamarine;
+        }
+        .input-div
+        {
+            display: inline-block;
+        }
+        .inp{
+            padding: 5px 10px;
+            margin: 20px;
+            text-align: center;
+            font-size: 15px;
+        }
+        label
+        {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Convertor</h1>
+    <div class="container">
+        <div class="input-div">
+            <label>Celcius</label>
+            <input type="number" id="cell" value="0" class="inp">
+        </div>
+        <div class="input-div">
+            <label>Fahrenhite</label>
+            <input type="number" id="fah" value="32" class="inp">
+        </div>
+    </div>
+    <script>
+        var cel=document.getElementById("cell");
+        var fah=document.getElementById("fah");
+            cel.addEventListener('input', function(){
+            let c= this.value;
+            let f= (c * 9/5)+32;
+            if(!Number.isInteger(f))
+            {
+                f=f.toFixed(4);
+            }
+            document.getElementById("fah").value=f;
+        });
+       fah.addEventListener('input', function(){
+        let f= this.value;
+        let c= (f-32)*5/9;
+        if(!Number.isInteger(c))
+            {
+                c=c.toFixed(4);
+            }
+        document.getElementById("cell").value=c;
+
+
+});
+</script>
+</body>
+</html>
