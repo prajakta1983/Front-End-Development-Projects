@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        
+        body
+        {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+            
+            h1{
+            text-align: center;
+            text-decoration: underline;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        img
+        {
+            margin-left:400px;
+            width: 500px ;
+            height: auto;
+        }
+        p
+        {
+        
+            text-align: justify;
+            padding: 20px;
+        }
+        .btn
+        {
+            float: right;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 3px;
+            cursor: pointer;
+        }
+        #blue{
+            background-color: #0000ff;
+            border: 2px solid gray;
+        
+        }
+        #orange
+        {
+            background-color: #ffa500;
+            border: 2px solid gray;
+        }
+        #black
+        {
+            background-color: black;
+            border: 2px solid gray;
+        }
+        @media screen and (max-width: 500px)
+            {
+               
+                img{
+
+                    margin-left: 200px;
+                    width: 100px;
+                    height: auto;
+                }
+                p
+                {
+                    font-size: 8px;
+
+                }
+                .container
+                {
+                    width: 100vw;
+                }
+                h1{
+                    font-size: 10px;
+                }
+                .colors{
+                    float: none;
+                }
+               
+
+            };
+            
+        
+    </style>
+</head>
+<body>
+    <div class="colors">
+    <span class="btn" id="blue" onclick="chnageBg('#0000ff')"></span>
+    <span class="btn" id="orange" onclick="chnageBg('#ffa500')"></span>
+    <span class="btn" id="black" onclick="chnageBg('#000000')"></span>
+    </div>
+    <div class="container">
+        <h1>About Us</h1>
+        <img src="digital clock/background.jpg" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet voluptates quae ab quos officiis consectetur et laboriosam aspernatur? Quibusdam error consectetur ad sed laborum consequatur corporis eligendi voluptatem. Tenetur veniam neque officiis nihil labore id. Deleniti neque excepturi ratione expedita voluptatum inventore error harum ad, illo facere facilis unde fuga. Corrupti quasi architecto exercitationem dolorem dignissimos ipsa voluptate, eaque, quia consectetur animi quaerat nisi praesentium dicta qui nemo sint in optio provident consequuntur, reprehenderit sed illo molestiae ullam veritatis. Vero obcaecati iure minima molestiae facere impedit? Expedita tempora delectus labore ipsum impedit recusandae, quis dolor nisi placeat minus ratione error nemo rem saepe nobis officia ut inventore sit tenetur sunt? Provident ad libero eius in cupiditate! Nesciunt harum excepturi est unde eius illo accusantium, labore similique officiis ipsum voluptatibus laborum. Animi quod quae harum obcaecati debitis mollitia minima distinctio impedit nam, aliquid placeat molestias iure inventore veritatis asperiores. Non, dolorum voluptates. Possimus aliquid recusandae, itaque libero qui necessitatibus id minus repellendus corrupti voluptate iure. Illo voluptatum aliquid consectetur ipsa recusandae iste a magnam ex minima, rerum distinctio velit, facere perspiciatis! Vel eligendi saepe molestiae voluptatibus et eius exercitationem id, architecto iusto eveniet harum autem sequi at rerum a inventore ullam laborum necessitatibus possimus excepturi ducimus? Impedit alias distinctio cumque quos libero, sit veritatis? Labore dolores facilis quaerat iste sequi provident, explicabo consequuntur, qui perferendis saepe deleniti similique. Nam, rem deserunt optio a dolores voluptatum eius tempora dolore vitae. Quisquam quaerat unde id est odio voluptatum deleniti saepe sapiente rem? Dicta nam minima pariatur aperiam voluptates aut ad aliquam dolorum ducimus quam laborum recusandae quo cumque accusamus tenetur repellendus at soluta autem ab, modi inventore et a suscipit. Expedita ipsum quam ad porro eius consectetur odit! Quo maiores quod accusamus doloribus sapiente, soluta quisquam repudiandae perspiciatis. Quos ab omnis similique soluta.
+        </p>
+    </div>
+    <script>
+        function chnageBg(color){
+            document.body.style.backgroundColor=color;
+            if(color=='#000000')
+            {
+               document.body.style.color='#ffffff';
+            }
+            else
+            document.body.style.color='#000000';
+        
+        }
+    </script>
+</body>
+</html>
